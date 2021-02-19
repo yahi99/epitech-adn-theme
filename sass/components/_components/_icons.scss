@@ -1,0 +1,302 @@
+@font-face {
+    font-family: icons;
+    src: url(../assets/images/icons/icons.eot);
+    src: url(../assets/images/icons/icons.eot?#iefix) format('embedded-opentype'), url(../assets/images/icons/icons.woff2) format('woff2'), url(../assets/images/icons/icons.woff) format('woff'), url(../assets/images/icons/icons.ttf) format('truetype'), url(../assets/images/icons/icons.svg?#icons) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?10k7qa');
+    src: url('../fonts/icomoon.eot?10k7qa#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?10k7qa') format('truetype'), url('../fonts/icomoon.woff?10k7qa') format('woff'), url('../fonts/icomoon.svg?10k7qa#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.icon,
+.round {
+    font-family: 'icons';
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1;
+    font-weight: normal;
+    font-style: normal;
+    speak: none;
+    text-decoration: inherit;
+    text-transform: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 10px;
+}
+
+.round {
+    position: relative;
+    width: 188px;
+    height: 188px;
+    background: url('../assets/images/round_icon.png') no-repeat 0 0;
+    .icomoon {
+        position: absolute;
+        top: 50%;
+        /* poussé de la moitié de hauteur du référent */
+        transform: translateY(-50%);
+        /* tiré de la moitié de sa propre hauteur */
+        text-align: center;
+        width: 188px;
+    }
+    p {
+        color: #da6c37;
+    }
+    &:hover {
+        p {
+            color: $colorBlue;
+        }
+        [class^="icon-"]:before {
+            color: $colorBlue;
+        }
+    }
+}
+
+.polygon {
+    position: relative;
+    width: 148px;
+    height: 129px;
+    background: url('../assets/images/polygone.png') no-repeat 0 0;
+    .icomoon {
+        position: absolute;
+        top: 50%;
+        /* poussé de la moitié de hauteur du référent */
+        transform: translateY(-50%);
+        /* tiré de la moitié de sa propre hauteur */
+        text-align: center;
+        width: 148px;
+    }
+    h4 {
+        color: #da6c37;
+        font-weight: 300;
+        margin: 8px 0;
+    }
+    /*&:hover {
+        p {
+            color: $colorBlue;
+        }
+        [class^="icon-"]:before {
+            color: $colorBlue;
+        }
+    }*/
+}
+
+.icomoon [class^="icon-"],
+.icomoon [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 30px;
+}
+
+.icomoon span {
+    display: block;
+}
+
+.icomoon p {
+    margin: 15px 0!important;
+    text-align: center!important;
+}
+
+.icon-vr:before {
+    content: "\e900";
+    color: #da6c37;
+}
+
+.icon-security:before {
+    content: "\e901";
+    color: #da6c37;
+}
+
+.icon-iot:before {
+    content: "\e902";
+    color: #da6c37;
+}
+
+.icon-ia:before {
+    content: "\e903";
+    color: #da6c37;
+}
+
+.icon-healthtech:before {
+    content: "\e904";
+    color: #da6c37;
+}
+
+.icon-greentech:before {
+    content: "\e905";
+    color: #da6c37;
+}
+
+.icon-fintech:before {
+    content: "\e906";
+    color: #da6c37;
+}
+
+.icon-cloud:before {
+    content: "\e907";
+    color: #da6c37;
+}
+
+.icon-caddy:before {
+    content: "\e908";
+    color: #da6c37;
+}
+
+.icon-retailtech:before {
+    content: "\e908";
+    color: #da6c37;
+}
+
+.icon-bigdata:before {
+    content: "\e909";
+    color: #da6c37;
+}
+
+.icon-vr:hover:before,
+.icon-iot:hover:before,
+.icon-ia:hover:before,
+.icon-healthtech:hover:before,
+.icon-greentech:hover:before,
+.icon-fintech:hover:before,
+.icon-cloud:hover:before,
+.icon-caddy:hover:before,
+.icon-retailtech:hover:before,
+.icon-bigdata:hover:before {
+    // color: $colorBlue;
+}
+
+// Icons
+$icon-bullet: '\e001';
+.icon-bullet::before {
+    content: "\e001";
+}
+
+$icon-chevron-down: '\e002';
+.icon-chevron-down::before {
+    content: '\e002';
+}
+
+$icon-chevron-large: '\e003';
+.icon-chevron-large::before {
+    content: '\e003';
+}
+
+$icon-chevron-left: '\e004';
+.icon-chevron-left::before {
+    content: '\e004';
+}
+
+$icon-chevron-right: '\e005';
+.icon-chevron-right::before {
+    content: '\e005';
+}
+
+$icon-chevron-up: '\e006';
+.icon-chevron-up::before {
+    content: '\e006';
+}
+
+$icon-close: '\e007';
+.icon-close::before {
+    content: '\e007';
+}
+
+$icon-cog: '\e008';
+.icon-cog::before {
+    content: '\e008';
+}
+
+$icon-diamond: '\e009';
+.icon-diamond::before {
+    content: '\e009';
+}
+
+$icon-exclamation: '\e00a';
+.icon-exclamation::before {
+    content: '\e00a';
+}
+
+$icon-google-dev: '\e00b';
+.icon-google-dev::before {
+    content: '\e00b';
+}
+
+$icon-hash: '\e00c';
+.icon-hash::before {
+    content: '\e00c';
+}
+
+$icon-introduction-to-media: '\e00d';
+.icon-introduction-to-media::before {
+    content: '\e00d';
+}
+
+$icon-lessons: '\e00e';
+.icon-lessons::before {
+    content: '\e00e';
+}
+
+$icon-menu: '\e00f';
+.icon-menu::before {
+    content: '\e00f';
+}
+
+$icon-minus: '\e010';
+.icon-minus::before {
+    content: '\e010';
+}
+
+$icon-multi-device-layouts: '\e011';
+.icon-multi-device-layouts::before {
+    content: '\e011';
+}
+
+$icon-performance: '\e012';
+.icon-performance::before {
+    content: '\e012';
+}
+
+$icon-plus: '\e013';
+.icon-plus::before {
+    content: '\e013';
+}
+
+$icon-question: '\e014';
+.icon-question::before {
+    content: '\e014';
+}
+
+$icon-slash: '\e015';
+.icon-slash::before {
+    content: '\e015';
+}
+
+$icon-star: '\e016';
+.icon-star::before {
+    content: '\e016';
+}
+
+$icon-tick: '\e017';
+.icon-tick::before {
+    content: '\e017';
+}
+
+$icon-user-input: '\e018';
+.icon-user-input::before {
+    content: '\e018';
+}

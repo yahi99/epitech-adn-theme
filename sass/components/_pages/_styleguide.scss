@@ -1,0 +1,73 @@
+/**
+*
+* Styleguide
+*
+**/
+
+.page--styleguide {
+    .container {
+        box-sizing: content-box;
+    }
+    pre {
+        background: #f0f0f0;
+        padding: 13px;
+        padding-right: 13px;
+        padding-left: 13px;
+        overflow: auto;
+    }
+    .styleguide__module-title {
+        margin-bottom: $lineHeight;
+    }
+    section {
+        margin-bottom: $lineHeight*2;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: $lineHeight*3 - 1;
+    }
+    .styleguide__color-list {
+        text-align: center;
+        li {
+            border-bottom: $lineHeight*2 solid;
+            margin-bottom: $lineHeight;
+            position: relative;
+        }
+    }
+    .styleguide__breadcrumb .breadcrumbs {
+        display: block;
+    }
+    .styleguide__lists {
+        ul,
+        ol {
+            margin-bottom: $lineHeight;
+        }
+    }
+    .styleguide__inverted-block {
+        padding: 60px!important;
+        background: #343434;
+        padding: 13px;
+        text-align: center;
+    }
+    .styleguide__theme-block {
+        background: #1C1C53;
+        padding: 0 13px;
+    }
+    ol>li {
+        position: relative;
+        padding-left: 0px;
+        color: #fff;
+    }
+    .list-links {
+        padding: 20px 0;
+    }
+    ol.list-links li::before {
+        display: none;
+    }
+    ol.list-links li::before {
+        display: none;
+    }
+    ol.list-links li a {
+        display: inline-block;
+        font-weight: 300;
+        color: #fff;
+        font-family: 'Roboto';
+    }
+}

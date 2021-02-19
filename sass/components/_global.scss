@@ -1,0 +1,58 @@
+/**
+*
+* Global
+*
+**/
+
+a:focus,
+a:active,
+a:visited,
+a:link,
+a:hover,
+a:visited {
+    outline: none;
+    //border: none;
+    text-decoration: none;
+    //color: inherit;
+}
+
+a:visited {
+    //color: inherit!important;
+}
+
+a {
+    transition-property: background, color, opacity, border, width;
+    transition-duration: 0.2s;
+    /*-webkit-transition-delay:0.2s;
+        transition-delay:0.2s;*/
+    transition-timing-function: ease-in-out;
+}
+
+.main-container {
+    @include container(true);
+}
+
+.container {
+    @include container(true);
+}
+
+.container-medium {
+    @include medium {
+        @include container(true);
+    }
+}
+
+.container-small {
+    @include small-only {
+        @include container(true);
+    }
+}
+
+.content {
+    @include wide {
+        // margin-right: 25.9%; // took this from the grid output - using @extend inside media-query is deprecated, need to figure out a better way to do this.
+        & pre {
+            // margin-right: -25.9%;
+        }
+    }
+}

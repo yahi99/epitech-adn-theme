@@ -1,0 +1,57 @@
+/**
+*
+* Link
+*
+**/
+
+a:visited,
+a:link {
+    color: inherit;
+}
+
+.cta--primary {
+    @include style-cta(#B2006D);
+    color: #1C1C53!important;
+    text-decoration: underline!important;
+    &:hover {
+        text-decoration: none!important;
+    }
+}
+
+.cta--secondary {
+    @include style-cta(#1C1C53);
+    color: #B2006D!important;
+    text-decoration: none!important;
+    &:hover {
+        text-decoration: none!important;
+        @include style-cta(#B2006D);
+        color: #4CB2FF!important;
+    }
+}
+
+a.cta--secondary:visited {
+    color: #1C1C53!important;
+}
+
+.elementor a {
+    text-decoration: inherit;
+}
+
+h2 a:hover {
+    color: #B2006D!important;
+}
+
+h2.entry-title a:visited,
+h2.entry-title a {
+    color: #fff;
+}
+
+h2 a.cta--secondary:visited,
+h2 a.cta--secondary {
+    color: #1C1C53;
+}
+
+
+/*.cta--secondary {
+    @include style-cta(#0072BC, $icon-chevron-right);
+}*/

@@ -1,0 +1,182 @@
+﻿/**
+*
+* Button
+*
+**/
+
+.button {
+    display: inline-block;
+    padding: (($lineHeight / 2) - 1) 20px;
+    margin-bottom: $lineHeight / 2;
+    margin-top: $lineHeight / 2;
+    min-height: $lineHeight;
+    text-align: center;
+    font-family: $fontHighlight;
+    font-weight: 300;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: 0;
+    min-width: 144px;
+}
+
+// Mixin to create buttons
+@mixin style-button($color, $textColor, $isInverted: false) {
+    background: $color;
+    color: $textColor;
+    border: 1px solid $textColor;
+    @if $isInverted {
+        border-color: transparent;
+    }
+}
+
+.button--primary {
+    @extend .button;
+    @include style-button(transparent, #1C1C53);
+    &:hover {
+        background: #1C1C53;
+        color: #ffffff;
+    }
+    &.bluelight {
+        @include style-button(transparent, #4CB2FF);
+        &:hover {
+            background: #4CB2FF;
+            color: #ffffff;
+        }
+    }
+    &.blue {
+        @include style-button(transparent, #1C1C53);
+        &:hover {
+            background: #1C1C53;
+            color: #ffffff;
+        }
+    }
+    &.orange {
+        @include style-button(transparent, #DA6C37);
+        &:hover {
+            background: #DA6C37;
+            color: #ffffff;
+        }
+    }
+    &.rose {
+        @include style-button(transparent, #B2006D);
+        &:hover {
+            background: #B2006D;
+            color: #ffffff;
+        }
+    }
+    &.white {
+        @include style-button(transparent, #ffffff);
+        &:hover {
+            background: #ffffff;
+            color: #343434;
+        }
+    }
+}
+
+.button--secondary {
+    @extend .button;
+    @include style-button(transparent, #1C1C53);
+    &:hover {
+        background: #1C1C53;
+        color: #ffffff;
+        &:visited {
+            color: #ffffff;
+        }
+    }
+    &:visited {
+        color: #0072BC;
+    }
+    &.bluelight {
+        @include style-button(transparent, #4CB2FF);
+        &:hover {
+            background: #4CB2FF;
+            color: #ffffff;
+            &:visited {
+                color: #ffffff;
+            }
+        }
+        &:visited {
+            color: #4CB2FF;
+        }
+    }
+    &.blue {
+        @include style-button(transparent, #1C1C53);
+        &:hover {
+            background: #1C1C53;
+            color: #ffffff;
+            &:visited {
+                color: #ffffff;
+            }
+        }
+        &:visited {
+            color: #0072BC;
+        }
+    }
+    &.orange {
+        @include style-button(transparent, #DA6C37);
+        &:hover {
+            background: #DA6C37;
+            color: #ffffff;
+            &:visited {
+                color: #ffffff;
+            }
+        }
+        &:visited {
+            color: #DA6C37;
+        }
+    }
+    &.rose {
+        @include style-button(transparent, #B2006D);
+        &:hover {
+            background: #B2006D;
+            color: #ffffff;
+            &:visited {
+                color: #ffffff;
+            }
+        }
+        &:visited {
+            color: #B2006D;
+        }
+    }
+    &.white {
+        @include style-button(transparent, #ffffff);
+        &:hover {
+            background: #ffffff;
+            color: #343434;
+            &:visited {
+                color: #343434;
+            }
+        }
+        &:visited {
+            color: #ffffff;
+        }
+    }
+}
+
+.button--secondary-variation {
+    @extend .button;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 30px;
+    border: none;
+    @include style-button(#1C1C53, #ffffff, true);
+    &:hover {
+        background: #1C1C53;
+        color: #ffffff;
+    }
+}
+
+// MEDIA QUERIES MOBILE
+@media all and (max-width: $medium) {
+    .button--secondary {
+        // max-width: 268px;
+        &:visited {}
+    }
+    .button {
+        max-width: 340px;
+        width: 100%;
+        margin: 10px auto;
+        display: block;
+    }
+}

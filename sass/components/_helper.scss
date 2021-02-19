@@ -1,0 +1,253 @@
+/**
+*
+* Helper
+*
+**/
+
+
+/**********************************************/
+
+//debug
+@media (min-width: 750px) {
+    .container {
+        // width: inherit!important;
+    }
+}
+
+
+/**********************************************/
+
+.clear {
+    &::before,
+    &::after {
+        content: '';
+        display: table;
+    }
+    &::after {
+        clear: both;
+    }
+}
+
+
+/*==========  COLORS  ==========*/
+
+
+/*==========  ANIMATIONS  ==========*/
+
+.fade {
+    opacity: 0;
+    transition: opacity 0.15s linear;
+}
+
+.fade.in {
+    opacity: 1;
+}
+
+
+/*==========  GENERIC  ==========*/
+
+.centered {
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.overflowhidden {
+    overflow: hidden;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.layer {
+    position: absolute;
+}
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.boxshadow {
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.4);
+}
+
+
+/*==========  UTILS JU  ==========*/
+
+.img-rounded {
+    border-radius: 0;
+}
+
+.img-circle {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.img {
+    background-size: cover!important;
+    background-position: center center!important;
+    background-repeat: no-repeat !important;
+}
+
+.centered {
+    text-align: center!important;
+}
+
+.videoContent {
+    &.iframe {
+        // max-width: 778px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    // max-width: 728px;
+    // min-width: 320px;
+    height: 100%;
+    //max-height: 380px;
+    // min-height: 120px;
+    transform: translateX(-50%);
+}
+
+.img-responsive {
+    display: none;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.table {
+    display: table;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.table-cell {
+    display: table-cell;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    &.vtop {
+        vertical-align: top;
+    }
+}
+
+.ellipsis {
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+
+.ellipsis:after {
+    content: '...';
+}
+
+.single-actu_events .actu_events blockquote {
+    position: relative;
+    font-weight: 300;
+    font-family: 'Roboto';
+    font-size: 18px;
+    line-height: 26px;
+    font-style: italic;
+    color: #0072BC;
+    display: block;
+    max-width: 660px;
+    min-width: 270px;
+    margin: 80px auto;
+    &:before {
+        content: '';
+        background: url('../assets/images/quote.png');
+        position: absolute;
+        top: 0;
+        left: -30px;
+        width: 23px;
+        height: 19px;
+    }
+    &:after {
+        content: '';
+        background: url('../assets/images/quote.png');
+        transform: rotate(180deg);
+        position: absolute;
+        width: 23px;
+        height: 19px;
+        bottom: 0;
+        right: -30px;
+    }
+    p,
+    span {
+        font-weight: 300;
+        font-family: 'Roboto';
+        font-size: 18px;
+        line-height: 26px;
+        font-style: italic;
+        color: #0072BC!important;
+        display: block;
+        width: 100%;
+    }
+}
+
+// MEDIA QUERIES MOBILE
+@media all and (max-width: $medium) {
+    .img {
+        background: none;
+        box-shadow: none;
+        height: inherit;
+        &.chiffres {
+            background: inherit;
+            box-shadow: inherit;
+            height: inherit;
+        }
+    }
+    .img-responsive {
+        display: block;
+        margin-bottom: 25px;
+        box-shadow: 0px 0px 10px #012B4742;
+    }
+    .desktop {
+        display: none!important;
+    }
+    .mobile {
+        display: block!important;
+    }
+}
